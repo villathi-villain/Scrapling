@@ -3,6 +3,10 @@ site/*
 local_tests/*
 .mcpregistry_*
 
+# example scraper output
+examples/*_output/
+*_output/
+
 # AI related files
 .claude/*
 CLAUDE.md
