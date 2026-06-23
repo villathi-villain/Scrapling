@@ -4,7 +4,7 @@ Real-world example: this powers the live "Competitive benchmark" on
 defectsguru.sg, comparing the top BTO/condo defect-inspection providers against
 DefectsGuru's own rate card.
 
-The target sites (a1inspection.sg, uncledefect.sg, easyinspection.sg) sit behind
+The target sites (a1inspection.sg, uncledefect.sg) sit behind
 a JS / bot-wall — plain HTTP clients get an `sgcaptcha` interstitial — so we
 fetch with a real browser via `StealthyFetcher` and fall back to the static
 `Fetcher`. Run `scrapling install` once to download the browser.
@@ -36,13 +36,6 @@ COMPETITORS = [
         "url": "https://uncledefect.sg/",
         "tier_names": {"1": "1 Trip", "3": "3 Trips", "5": "5 Trips"},
         "five_trip_4room": [r"5[\s-]*trip[^$]{0,400}?4[\s-]*room[^$]{0,120}?\$\s?(\d{3})"],
-    },
-    {
-        "name": "Easy Inspection",
-        "slug": "easyinspection",
-        "url": "https://easyinspection.sg/",
-        "tier_names": {"1": "Bronze", "3": "Silver", "5": "Gold"},
-        "five_trip_4room": [r"gold[^$]{0,400}?4[\s-]*room[^$]{0,120}?\$\s?(\d{3})"],
     },
 ]
 
